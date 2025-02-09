@@ -1,0 +1,14 @@
+<!-- @let selectedInstrument = this.selectedInstrument(); -->
+
+<mat-card class="market-data">
+  <mat-card-title>Market Data:</mat-card-title>
+  <mat-card-content>
+    @if (selectedInstrument()) {
+      <div class="data-grid">
+        <div><strong>Symbol:</strong> {{ selectedInstrument()?.symbol }}</div>
+        <div><strong>Price:</strong> {{ selectedInstrument()?.price ? selectedInstrument()?.price : '----'}}</div>
+        <div><strong>Time:</strong> {{ selectedInstrument()?.timestamp ? (selectedInstrument()?.timestamp | date: 'dd.MM.yyyy HH:mm:ss') : '----'}}</div>
+      </div>
+    }
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,17 @@
+<mat-card class="market-container">
+  <mat-card-content>
+    <div class="top-controls">
+      <mat-form-field appearance="outline" class="symbol-select">
+        <mat-label>Select Symbol</mat-label>
+        <mat-select [(ngModel)]="selectedInstrumentIndex">
+          @for (instrument of instruments(); track instrument.id) {
+            <mat-option [value]="$index">{{ instrument.symbol }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="onSubscribe()">
+        Subscribe
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

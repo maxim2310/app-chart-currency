@@ -1,0 +1,19 @@
+:host {
+  display: block;
+}
+
+.market-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.top-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.symbol-select {
+  width: 200px;
+}
