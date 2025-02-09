@@ -11,6 +11,7 @@ import {
   timer,
 } from 'rxjs';
 import { InstrumentService } from './instrument.service';
+import { environment } from '../../../environments/environment';
 
 interface SocketMessage {
   type: 'l1-subscription';
@@ -56,7 +57,7 @@ export class WebSocketService {
     if (!token) return throwError(() => new Error('No access token available'));
 
     this.ws$ = webSocket({
-      url: `wss://platform.fintacharts.com/api/streaming/ws/v1/realtime?token=${token}`,
+      url: `${environment.URI_WSS}/api/streaming/ws/v1/realtime?token=${token}`,
       deserializer: msg => JSON.parse(msg.data),
       serializer: msg => JSON.stringify(msg),
       openObserver: {

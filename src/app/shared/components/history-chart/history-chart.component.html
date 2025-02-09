@@ -1,7 +1,7 @@
 <mat-card class="chart-container">
-  <mat-card-title>Charting Data:</mat-card-title>
-  <mat-card-content>
-    <!-- Add historical chart here -->
-    <div class="chart-placeholder">Chart will be displayed here</div>
-  </mat-card-content>
+  <mat-card-title>History Data:</mat-card-title>
+    <mat-card-content [class.invisible]="!data().length">
+      <!-- Add historical chart here -->
+      <div #chartContainer class="chart"></div>
+    </mat-card-content>
 </mat-card>

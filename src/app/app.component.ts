@@ -43,8 +43,6 @@ export class AppComponent implements OnInit {
     private socketService: WebSocketService
   ) {
     effect(() => {
-      console.log('New token:', this.authService.accessTokenSignal());
-
       if (this.authService.accessTokenSignal()) {
         this.instrumentService.getInstruments().subscribe({
           error: (e: unknown) => {
@@ -54,11 +52,9 @@ export class AppComponent implements OnInit {
       }
     });
 
-    //TODO: delete
     effect(() => {
       const token = this.authService.accessTokenSignal();
       const instrument = this.selectedInstrument();
-      console.log(instrument);
       if (token && instrument && instrument.id !== this.prevInstrument()?.id) {
         this.socketService.connect();
         this.socketService.subscribeToInstrument(instrument.id);

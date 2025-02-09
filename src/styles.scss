@@ -22,3 +22,12 @@ body {
   background: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
 }
+
+.mat-mdc-card-title {
+  margin-bottom: 15px !important;
+  padding-left: 16px !important;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  height: 0 !important;
+}

@@ -41,8 +41,6 @@ export class InstrumentSelectorComponent {
   constructor(private instrumentService: InstrumentService) {}
 
   onSubscribe() {
-    console.log(this.selectedInstrumentIndex);
-
     this.instrumentService.selectedInstrumentIndex.set(
       this.selectedInstrumentIndex
     );

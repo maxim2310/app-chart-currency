@@ -3,12 +3,10 @@
 <mat-card class="market-data">
   <mat-card-title>Market Data:</mat-card-title>
   <mat-card-content>
-    @if (selectedInstrument()) {
-      <div class="data-grid">
-        <div><strong>Symbol:</strong> {{ selectedInstrument()?.symbol }}</div>
-        <div><strong>Price:</strong> {{ selectedInstrument()?.price ? selectedInstrument()?.price : '----'}}</div>
-        <div><strong>Time:</strong> {{ selectedInstrument()?.timestamp ? (selectedInstrument()?.timestamp | date: 'dd.MM.yyyy HH:mm:ss') : '----'}}</div>
-      </div>
-    }
+    <div class="data-grid">
+      <div><strong>Symbol:</strong> <p>{{ selectedInstrument()?.symbol ? selectedInstrument()?.symbol : '----' }}</p></div>
+      <div><strong>Price:</strong> <p>{{ selectedInstrument()?.price ? selectedInstrument()?.price : '----'}}</p></div>
+      <div><strong>Time:</strong> <p>{{ selectedInstrument()?.timestamp ? (selectedInstrument()?.timestamp | date: 'dd.MM.yyyy HH:mm:ss') : '----'}}</p></div>
+    </div>
   </mat-card-content>
 </mat-card>

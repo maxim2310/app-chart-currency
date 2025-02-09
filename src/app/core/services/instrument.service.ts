@@ -27,7 +27,6 @@ export class InstrumentService {
   selectedInstrumentIndex: WritableSignal<number | null> = signal(null);
   selectedInstrument: Signal<Instrument | null> = computed(() => {
     const index = this.selectedInstrumentIndex();
-
     if (typeof index === 'number' && index >= 0 && this.instrumentsSignal()) {
       return this.instrumentsSignal()[index];
     }
