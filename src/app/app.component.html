@@ -1,34 +1,5 @@
-<mat-card class="market-container" appearance="outlined">
-  <mat-card-content>
-    <div class="top-controls">
-      <mat-form-field appearance="outline" class="symbol-select">
-        <mat-label>Select Symbol</mat-label>
-        <mat-select [(ngModel)]="selectedSymbol">
-          <mat-option *ngFor="let symbol of symbols" [value]="symbol">{{
-            symbol
-          }}</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <button mat-raised-button color="primary">Subscribe</button>
-    </div>
-  </mat-card-content>
-</mat-card>
+<app-instrument-selector></app-instrument-selector>
 
-<mat-card class="market-data">
-  <mat-card-title>Market Data:</mat-card-title>
-  <mat-card-content>
-    <div class="data-grid">
-      <div><strong>Symbol:</strong> {{ selectedSymbol }}</div>
-      <div><strong>Price:</strong> $110</div>
-      <div><strong>Time:</strong> 21.01.2</div>
-    </div>
-  </mat-card-content>
-</mat-card>
+<app-market-bar></app-market-bar>
 
-<mat-card class="chart-container">
-  <mat-card-title>Charting Data:</mat-card-title>
-  <mat-card-content>
-    <!-- Add historical chart here -->
-    <div class="chart-placeholder">Chart will be displayed here</div>
-  </mat-card-content>
-</mat-card>
+<app-history-chart></app-history-chart>
