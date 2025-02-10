@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "deploy-n": "netlify deploy --build --prod"
   },
   "private": true,
   "dependencies": {
