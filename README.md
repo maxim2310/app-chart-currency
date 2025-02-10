@@ -1,60 +1,44 @@
-# AppChartCurrency
+# App Chart Currency
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
+A real-time market data visualization app built with Angular, integrated with the Fintacharts platform and TradingView’s Lightweight Charts. The app displays both real-time and historical price data, with interactive charts to monitor the financial markets.
+## Demo
 
-## Development server
+You can see a live demo of the application here: [App Chart Currency - Demo](https://app-chart-currency.netlify.app/)
 
-To start a local development server, run:
+## Features
 
-```bash
-ng serve
-```
+- Display real-time market data using WebSockets
+- Interactive charts with historical price data
+- Supports multiple market instruments
+- Built with Angular 19
+- Uses the Lightweight Charts library for high-performance charting
+- Simple and clean UI for easy tracking of price movements
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Technologies Used
 
-## Code scaffolding
+- **Angular 19**: The main framework used to build the app.
+- **Lightweight Charts**: A library by TradingView for rendering interactive charts.
+- **WebSocket API**: For fetching real-time data.
+- **Fintacharts API**: For retrieving historical price data and real-time market information.
+- **RxJS**: To handle asynchronous data streams.
+- **Netlify**: For hosting and deploying the application.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Prerequisites
 
-```bash
-ng generate component component-name
-```
+Before you start, make sure you have the following installed on your local machine:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Node.js (preferably v18 or later)
+- npm (Node Package Manager)
 
-```bash
-ng generate --help
-```
+## Installation
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# app-chart-currency
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/maxim2310/app-chart-currency.git
+   cd app-chart-currency
+2. **Install the dependencies**
+   ```bash
+   npm install
+3. **Running the Application Locally**
+   ```bash
+   ng serve
