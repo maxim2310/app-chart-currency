@@ -20,7 +20,7 @@ interface GetInstrumentsResponse {
 })
 export class InstrumentService {
   instrumentUrl =
-    environment.URI +
+    (environment.production ? '' : environment.URI) +
     '/api/instruments/v1/instruments?provider=oanda&kind=forex';
 
   instrumentsSignal = signal<Instrument[]>([]);

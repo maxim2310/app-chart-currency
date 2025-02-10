@@ -22,7 +22,9 @@ interface GetHistoryResponse {
   providedIn: 'root',
 })
 export class HistoryService {
-  private apiUrl = environment.URI + '/api/bars/v1/bars/count-back';
+  private apiUrl =
+    (environment.production ? '' : environment.URI) +
+    '/api/bars/v1/bars/count-back';
   historyData = signal<HistoryData[]>([]);
 
   constructor(
